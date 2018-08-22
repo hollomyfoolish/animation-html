@@ -22,3 +22,27 @@ html, body{
     width: 5px;
     transition: 1s height;
 }
+#ball{
+    position: absolute;
+    bottom: 110px;
+    width: 40px;
+    height: 40px;
+    left: 100px;
+    border-radius: 20px;
+    background-color: red;
+    /* transition: 1s left; */
+    cursor: pointer;
+    z-index: 10;
+}
+#clear{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+.forward{
+    transition: 1s left, 1s top;
+}
