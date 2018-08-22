@@ -1,0 +1,24 @@
+html, body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#speed{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: auto;
+    background-color: gray;
+}
+#speed > div{
+    display: inline-block;
+    margin-left: 2px;
+    background-color: green;
+    width: 5px;
+    transition: 1s height;
+}

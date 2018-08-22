@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>startup VUE</title>
+    <script type="text/javascript" src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+    <script type="text/javascript">console.log("hello");</script>
+        {{{ message }}}
+        <input v-model="message">
+    </div>
+    <div id="app2">
+        <ul>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="./start.js"></script>
+
+</html>

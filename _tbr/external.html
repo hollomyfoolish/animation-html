@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to Smart Search</title>
+<script type="text/javascript">
+  window.external.outter = function(){
+    return 'i am top'
+  };
+
+setInterval(function(){
+  console.log(window.external.outter());
+}, 1000);
+
+</script>
+</head>
+<body>
+
+<button id="top"> top </button>
+
+<iframe src="./inner.html"></iframe>
+<iframe src="http://10.58.82.198:1888/inner.html"></iframe>
+
+</body>
+<script type="text/javascript">
+    document.querySelector('#top').onclick = function(){
+      console.log(window.external.outter());
+    }
+</script>
+</html>

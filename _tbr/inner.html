@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to Smart Search</title>
+<script type="text/javascript">
+  window.external.inner = function(){
+    return 'i am inner'
+  };
+
+</script>
+</head>
+<body>
+<button id="inner"> inner </button>
+
+</body>
+<script type="text/javascript">
+    document.querySelector('#inner').onclick = function(){
+      console.log(window.external.inner());
+      console.log(window.external.outter());
+      console.log(window.external === top.external);
+    }
+</script>
+</html>
