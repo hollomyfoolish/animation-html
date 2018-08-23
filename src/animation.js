@@ -85,7 +85,7 @@
 //         this._start = false
 //     }
 // }
-
+let zombies = ['static/img/z1.png', 'static/img/z2.png', 'static/img/z3.png', 'static/img/z4.png']
 export default {
     _start: false,
     _startX: -1,
@@ -97,6 +97,7 @@ export default {
     _maxDiff: 90,
     _ballMoving: false,
     _maxSpeed: -1,
+    _zombieIdx: 0,
     start(){
         window.addEventListener('mousedown', this.startHammer.bind(this), false)
         document.addEventListener('mouseup', this.endHammer.bind(this), false)
@@ -140,7 +141,7 @@ export default {
         this._ball.style.cssText = ''
         this._score.innerHTML = ''
         this._score.classList.remove('show')
-        this._zombie.classList.remove('hit')
+        // this._zombie.classList.remove('hit')
     },
     moveBall(speed){
         if(this._ballMoving === true){
@@ -170,7 +171,13 @@ export default {
     },
     zombiefall(evt){
         if(this._zombie.classList.contains('hit')){
-            this._zombie.classList.remove('hit')
+            console.log(this._zombie.querySelector('img'))
+            this._zombie.querySelector('img').src = zombies[this.nextZombie()];
+            this._zombie.classList.remove('hit');
         }
+    },
+    nextZombie(){
+        this._zombieIdx = (this._zombieIdx + 1)%zombies.length
+        return this._zombieIdx
     }
 }
