@@ -22,17 +22,38 @@ html, body{
     width: 5px;
     transition: 1s height;
 }
+#score{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 16px;
+    color: red;
+    opacity: 0;
+    transition: 1s font-size, 1s opacity;
+}
+#score.show{
+    font-size: 32px;
+    opacity: 1;
+}
+.disable-text-select{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+}
 #ball{
     position: absolute;
-    bottom: 110px;
-    width: 40px;
-    height: 40px;
-    left: 100px;
-    border-radius: 20px;
+    bottom: 0px;
+    width: 60px;
+    height: 60px;
+    left: 200px;
+    border-radius: 30px;
     background-color: red;
-    /* transition: 1s left; */
     cursor: pointer;
     z-index: 10;
+    font-size: 24px;
+    transition: 1s left, 1s transform;
 }
 #clear{
     position: fixed;
@@ -45,4 +66,54 @@ html, body{
 }
 .forward{
     transition: 1s left, 1s top;
+}
+#playground{
+    position: fixed;
+    width: 100%;
+    left: 20px;
+    top: 0px;
+    bottom: 40px;
+    border-bottom: 2px solid;
+}
+#hammer-wrapper{
+    position: absolute;
+    height: 40px;
+    width: 110px;
+    bottom: 10px;
+}
+#handler{
+    position: absolute;
+    height: 20px;
+    width: 80px;
+    left: 0px;
+    bottom: 10px;
+    background-color: burlywood;
+    cursor: pointer;
+}
+#hammer{
+    position: absolute;
+    left: 80px;
+    bottom: 0px;
+    width: 30px;
+    height: 40px;
+    background-color: coral;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#zombie{
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    bottom: 0px;
+    right: 20px;
+    transition: 1s transform, 1s bottom;
+    transform: rotateZ(0deg);
+}
+#zombie img{
+    width: 100%;
+    height: 100%;
+}
+#zombie.hit{
+    bottom: 200px;
+    transform: rotateZ(360deg);
 }

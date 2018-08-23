@@ -4,7 +4,19 @@
     <title>起步</title>
   </head>
   <body>
-    <div id="clear">clear</div>
-    <div id="ball" draggable="true"></div>
+    <div id="speed"></div>
+    <div id="clear" draggable="false" class="disable-text-select">clear</div>
+    <div id="playground">
+        <div id="score" class="disable-text-select">0</div>
+        <div id="hammer-wrapper">
+            <div id="handler"></div>
+            <div id="hammer"></div>
+        </div>
+        <div></div>
+        <div id="ball" draggable="false">
+            <span class="disable-text-select" draggable="false" style="left: 20px; top: 5px;position: relative;">*</span>
+        </div>
+        <div id="zombie" draggable="false" class="disable-text-select"><img src="static/img/z1.png" alt=""></div>
+    </div>
   </body>
 </html>
